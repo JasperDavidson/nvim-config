@@ -38,17 +38,7 @@ vim.opt.timeoutlen = 0 -- Adjust this to your preference
 -- Enable native autocompletion
 -- vim.o.autocomplete = true
 
--- Diagnostic keymaps
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
--- Window navigation keybinds
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-
--- Escape from highlight (e.g. after substitution)
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+require("vim._core.ui2").enable({})
 
 -- Indent settings
 local indent_settings = {
@@ -73,3 +63,4 @@ vim.o.termguicolors = true
 require("core.autocmds")
 require("core.andrew-sync")
 require("lsp.lsp-setup")
+require("core.keymaps")
