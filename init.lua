@@ -72,3 +72,4 @@ vim.o.termguicolors = true
 
 require("core.autocmds")
 require("core.andrew-sync")
+require("lsp.lsp-setup")
