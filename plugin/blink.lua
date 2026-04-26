@@ -12,5 +12,11 @@ require("blink.cmp").setup({
 		default = { "lsp", "path", "snippets", "buffer" },
 	},
 
+	cmdline = {
+		enabled = true,
+		keymap = { preset = "cmdline" },
+		completion = { menu = { auto_show = true } },
+	},
+
 	signature = { enabled = true },
 })

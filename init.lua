@@ -35,6 +35,17 @@ vim.o.undofile = true
 -- They call me verstappen
 vim.opt.timeoutlen = 0 -- Adjust this to your preference
 
+-- Filetype extension
+vim.filetype.add({
+	extension = {
+		h = "c",
+		hpp = "cpp",
+		tpp = "cpp",
+		metal = "cpp",
+		mm = "cpp",
+	},
+})
+
 -- Enable native autocompletion
 -- vim.o.autocomplete = true
 

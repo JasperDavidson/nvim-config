@@ -12,3 +12,4 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- LSP keymaps
 vim.keymap.set("n", "gz", vim.lsp.buf.rename, { desc = "Rename symbol" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })

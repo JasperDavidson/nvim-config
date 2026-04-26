@@ -20,6 +20,10 @@
       "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
       "src": "https://github.com/folke/lazydev.nvim"
     },
+    "milli.nvim": {
+      "rev": "b0c265effc9c6e364cebe81e6e6dfa4672eef99b",
+      "src": "https://github.com/amansingh-afk/milli.nvim"
+    },
     "mini.nvim": {
       "rev": "402ee6c6ec8ea44b22330446c8fb4e615fd3953e",
       "src": "https://github.com/nvim-mini/mini.nvim"

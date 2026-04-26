@@ -1,9 +1,23 @@
 vim.pack.add({ "https://github.com/folke/snacks.nvim" })
+vim.pack.add({ "https://github.com/amansingh-afk/milli.nvim" })
+local milli = require("milli")
+
+local splash_name = "blackhole"
+local splash_data = milli.load({ splash = splash_name })
 
 require("snacks").setup({
 	bigfile = { enabled = true },
-	image = { enabled = true, math = { enabled = false } },
-	dashboard = { enabled = true },
+	dashboard = {
+		enabled = true,
+		preset = {
+			header = table.concat(splash_data.frames[1], "\n"),
+		},
+		sections = {
+			{ section = "header", padding = 2 },
+
+			{ section = "keys", gap = 1, padding = 1 },
+		},
+	},
 	explorer = { enabled = true },
 	indent = { enabled = true },
 	input = { enabled = true },
@@ -18,8 +32,8 @@ require("snacks").setup({
 			},
 		},
 		layout = {
-			preset = "default", -- or "telescope" if you like that floating look
-			backdrop = 100, -- 0 to 100. Higher = darker background behind the picker
+			preset = "default",
+			backdrop = 100,
 		},
 	},
 	notifier = { enabled = true },
@@ -121,3 +135,5 @@ end, { desc = "Git Diff (Hunks)" })
 vim.keymap.set("n", "<leader>gf", function()
 	Snacks.picker.git_log_file()
 end, { desc = "Git Log File" })
+
+milli.snacks({ splash = splash_name, loop = true })
